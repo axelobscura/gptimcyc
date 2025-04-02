@@ -14,13 +14,15 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.card}>
-        <Image
-          src="/concreton.webp"
-          alt="Logo"
-          width={145}
-          height={185}
-          className={styles.logo}
-        />
+        <div className={styles.logoContainer}>
+          <Image
+            src="/concreton.webp"
+            alt="Logo"
+            width={145}
+            height={185}
+            className={styles.logo}
+          />
+        </div>
         <p className={styles.titulo}>ASISTENTE CONCRETON</p>
         <p className={styles.subtitulo}>Instituto Mexicano del Cemento y del Concreto A.C.</p>
         {choices.map((choice) => {
