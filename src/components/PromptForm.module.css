@@ -1,0 +1,59 @@
+.input {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 1rem;
+    display: block;
+    border: 1px solid #97999a;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+
+.submitButton {
+    padding: 0.8rem 3rem;
+    border: 0;
+    font-family: inherit;
+    background: #061420;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor:pointer;
+    border-radius: 120px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.submitButton[disabled] {
+    opacity: 0.25;
+    color: gray;
+}
+
+.label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.loading {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    animation: spin 1.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Make sure the button can accommodate the spinner */
+  .submitButton {
+    /* ...existing styles... */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

@@ -1,0 +1,96 @@
+.main {
+}
+
+.card {
+    max-width: 70%;
+    margin: 0 auto;
+    display: block;
+    background: #fff;
+    border-radius: 0.25rem;
+    padding: 1rem 2rem 1rem;
+    box-shadow: 0px 2px 2px rgba(2, 23, 31, 0.1);
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0rem;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.response {
+  width: 100%;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.response h1,
+.response h2,
+.response h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.response p {
+  margin-bottom: 1rem;
+}
+
+.response ul,
+.response ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.response li {
+  margin-bottom: 0.5rem;
+}
+
+.codeBlock {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.inlineCode {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+  font-family: monospace;
+}
+
+.codeContent {
+  font-family: monospace;
+}
+
+.response table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.response th,
+.response td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.response tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
