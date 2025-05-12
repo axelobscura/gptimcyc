@@ -10,6 +10,7 @@ import Image from "next/image";
 export default function Home() {
   const [choices, setChoices] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  
   console.log('choices: ', choices);
   return (
     <main className={styles.main}>
@@ -25,7 +26,7 @@ export default function Home() {
         </div>
         <p className={styles.titulo}>ASISTENTE CONCRETÓN</p>
         <p className={styles.subtitulo}>Instituto Mexicano del Cemento y del Concreto A.C.</p>
-        {/*choices.map((choice) => {
+        {choices.map((choice) => {
           console.log(choice.messages);
           return (
             <div className={styles.response} key={choice.index}>
@@ -44,7 +45,7 @@ export default function Home() {
               </ReactMarkdown>
             </div>
           );
-        })*/}
+        })}
         <PromptForm
           isLoading={isLoading}
           onSubmit={async (prompt) => {
@@ -58,10 +59,10 @@ export default function Home() {
                 prompt,
               }),
             });
+
             setIsLoading(false);
             const result = await response.json();
-            //setChoices(prevState => ({ ...prevState, result }));
-            setChoices(choices);
+            setChoices(result.choices);
           }}
         />
       </div>
