@@ -4,20 +4,19 @@
     padding: 1rem;
     display: block;
     border: 1px solid #97999a;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    border-radius: 20px;
 }
 
 
 .submitButton {
-    padding: 0.8rem 3rem;
+    padding: 1.2rem 3rem;
     border: 0;
     font-family: inherit;
     background: #061420;
     color: #fff;
     font-size: 1.1rem;
     cursor:pointer;
-    border-radius: 120px;
+    border-radius: 20px;
     font-weight: 200;
     text-transform: uppercase;
 }
@@ -28,10 +27,11 @@
 }
 
 .label {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 200;
     margin-bottom: 0.5rem;
     display: block;
+    text-transform: uppercase;
 }
 
 .loading {
@@ -39,6 +39,14 @@
     height: 20px;
     margin-left: 8px;
     animation: spin 1.5s linear infinite;
+  }
+
+  .inputforma {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
   }
   
   @keyframes spin {

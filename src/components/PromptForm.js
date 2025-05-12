@@ -3,21 +3,20 @@ import styles from "./PromptForm.module.css";
 
 export default function PromptForm({ onSubmit, isLoading }) {
   const [prompt, setPrompt] = useState("");
-
+  const [consultas, setConsultas] = useState();
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        // Fire callback...
         if (prompt === "") {
           return;
         }
-
         onSubmit(prompt);
+        setConsultas(prompt);
         setPrompt("");
       }}
     >
-      <label className={styles.label}>Ingrese una consulta:</label>
+      <div className={styles.inputforma}>
       <input
         className={styles.input}
         type="text"
@@ -60,6 +59,7 @@ export default function PromptForm({ onSubmit, isLoading }) {
           </svg>
         )}
       </button>
+      </div>
     </form>
   );
 }

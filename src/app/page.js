@@ -7,27 +7,26 @@ import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import Image from "next/image";
 
-
 export default function Home() {
   const [choices, setChoices] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  console.log('choices: ', choices);
   return (
     <main className={styles.main}>
       <div className={styles.card}>
         <div className={styles.logoContainer}>
           <Image
-            src="/concreton.webp"
+            src="/concreton-Supervisor.png"
             alt="Logo"
-            width={145}
-            height={185}
+            width={105}
+            height={205}
             className={styles.logo}
           />
         </div>
-        <p className={styles.titulo}>ASISTENTE CONCRETON</p>
+        <p className={styles.titulo}>ASISTENTE CONCRETÓN</p>
         <p className={styles.subtitulo}>Instituto Mexicano del Cemento y del Concreto A.C.</p>
-        {choices.map((choice) => {
-          console.log(choice);
+        {/*choices.map((choice) => {
+          console.log(choice.messages);
           return (
             <div className={styles.response} key={choice.index}>
               <ReactMarkdown
@@ -45,8 +44,7 @@ export default function Home() {
               </ReactMarkdown>
             </div>
           );
-        })}
-
+        })*/}
         <PromptForm
           isLoading={isLoading}
           onSubmit={async (prompt) => {
@@ -60,10 +58,10 @@ export default function Home() {
                 prompt,
               }),
             });
-
             setIsLoading(false);
             const result = await response.json();
-            setChoices(result.choices);
+            //setChoices(prevState => ({ ...prevState, result }));
+            setChoices(choices);
           }}
         />
       </div>
