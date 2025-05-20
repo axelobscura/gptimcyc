@@ -8,7 +8,7 @@
 }
 
 
-.submitButton {
+.submitButton, .copyButton {
     padding: 1.2rem 3rem;
     border: 0;
     font-family: inherit;
@@ -19,6 +19,10 @@
     border-radius: 20px;
     font-weight: 200;
     text-transform: uppercase;
+}
+
+.copyButton {
+    background: rgb(43, 102, 153);
 }
 
 .submitButton[disabled] {
