@@ -16,7 +16,7 @@ export async function POST(request) {
       {
         role: "system",
         content:
-          "Dar toda la información encontrada sobre temas de cemento y concreto realcionadas con la construcción. Agregar la bibliografía de las fuentes consultadas.",
+          "Dar toda la información encontrada sobre temas de cemento y concreto realcionadas con la construcción. No agregar la bibliografía de las fuentes consultadas. Al final de la consulta colocar el texto biblioteca digital IMCYC",
           //content: "You are very grumpy. Please answer my questions with sarcasm, grumpiness, and anger."
       },
       {
